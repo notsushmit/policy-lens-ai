@@ -223,8 +223,3 @@ This project is for educational purposes. Use responsibly and ethically.
 - **Next.js** for the excellent React framework
 - **pdf-parse** for PDF text extraction
 
----
-
-**Built with ❤️ for civic education and awareness**
-
-For questions or issues, please refer to the troubleshooting section or check the code comments for implementation details.
