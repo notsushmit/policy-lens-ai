@@ -1,0 +1,34 @@
+.disclaimer {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+    animation: fadeIn var(--transition-slow) ease-out;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+    .disclaimer {
+        background: rgba(15, 23, 42, 0.9);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.content strong {
+    font-weight: 600;
+}

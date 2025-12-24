@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    position: relative;
+}
+
+.particleBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+.headerContent {
+    text-align: center;
+    padding: var(--spacing-2xl) 0;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: var(--spacing-md) 0 0 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main {
+    flex: 1;
+    padding: var(--spacing-2xl) 0;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+}
+
+.progressStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    opacity: 0.4;
+    transition: all var(--transition-base);
+}
+
+.progressStepActive {
+    opacity: 1;
+}
+
+.progressNumber {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gray-200);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: all var(--transition-base);
+}
+
+.progressStepActive .progressNumber {
+    background: linear-gradient(135deg, var(--primary-500), var(--accent));
+    color: white;
+    box-shadow: var(--shadow-md);
+    transform: scale(1.1);
+}
+
+.progressLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.progressStepActive .progressLabel {
+    color: var(--primary-500);
+    font-weight: 600;
+}
+
+.progressLine {
+    width: 80px;
+    height: 2px;
+    background: var(--border);
+    margin: 0 var(--spacing-md);
+}
+
+.loadingContainer,
+.errorContainer {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    animation: fadeIn var(--transition-slow) ease-out;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.loadingTitle,
+.errorTitle {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    color: white;
+}
+
+.loadingText,
+.errorText {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 500px;
+    margin: 0 auto var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.errorIcon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-2xl);
+}
+
+@media (prefers-color-scheme: dark) {
+    .page {
+        background: var(--background-dark);
+    }
+    
+    .footer {
+        background: var(--surface-dark);
+        border-top-color: var(--border-dark);
+    }
+}
+
+.footerText {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .progress {
+        padding: var(--spacing-md);
+    }
+
+    .progressNumber {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .progressLine {
+        width: 40px;
+    }
+
+    .progressLabel {
+        font-size: 0.75rem;
+    }
+}
