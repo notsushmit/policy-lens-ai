@@ -4,7 +4,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--background);
     position: relative;
 }
 
@@ -142,17 +141,6 @@
     border-top: 1px solid var(--border);
     padding: var(--spacing-md) 0;
     margin-top: var(--spacing-2xl);
-}
-
-@media (prefers-color-scheme: dark) {
-    .page {
-        background: var(--background-dark);
-    }
-    
-    .footer {
-        background: var(--surface-dark);
-        border-top-color: var(--border-dark);
-    }
 }
 
 .footerText {
